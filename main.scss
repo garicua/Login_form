@@ -1,0 +1,237 @@
+@import "variables";
+@import "mixin";
+@import "_reset";
+
+/*
+  ====================================================================
+  LogIn form
+  ====================================================================
+*/
+body{
+  background-color: gray;
+  text-align: center;
+  //margin-bottom: 50px;
+}
+section{
+  margin-top: 10px;
+  font-family: $family;
+  font-weight: bold;
+  h1{
+    background-color: white;
+    border-top: 2px solid #E62B1E;
+    color: black;
+    height: 60px;
+    width: 890px;
+    padding-top: 25px;
+    font-size: $size_h1;
+    text-align: center;
+  }
+  .close{
+    position: relative;
+    bottom: 330px;
+    left: 850px;
+    text-decoration: none;
+  }
+  div{
+    margin: 0 auto;
+    display: inline-block;
+    background-color: #F3F3F3;
+    .close{
+      position: relative;
+      bottom: 330px;
+      left: 850px;
+    }
+    ul{
+      transform: translateY(-150px);
+    }
+    li{
+      margin: 50px 0;
+    }
+    .btn{
+      margin: 0 60px;
+      font-size: $size_h1/2.2;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      background-image: url(images/sprite.png);
+      background-repeat: no-repeat;
+      outline: none;
+    }
+    .facebook{
+      background-position: 0 -80px;
+      background-color: #3E5B96;
+      padding: 15px 80px;
+      &:hover{
+        background-color: #1f4196;
+      }
+      &:active{
+       color: #639693;
+      }
+    }
+    .google{
+      background-color: #DD5342;
+      padding: 15px 83px;
+      background-position: 0 -44px;
+      &:hover{
+        background-color: #dd4235;
+      }
+      &:active{
+        color: #dd9471;
+      }
+    }
+  }
+  .login_form{
+    margin: 50px 0;
+    border-left: 1px solid #d0d0d0;
+  }
+  form{
+    margin: 0 60px;
+    font-size: $size_h1/2.2;
+    text-align: left;
+    .account_info{
+      height: 30px;
+      width: 300px;
+      margin: 5px 0 20px 0;
+      font-size: $size_h1/1.9;
+      &:hover{
+        border-color: #3b88c3;
+      }
+    }
+  }
+    .login_btn{
+      display: block;
+      margin-top: 20px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      font-size: $size_h1/2.3;
+      border: 0;
+      border-radius: 4px;
+      height: 40px;
+      width: 100px;
+      cursor: pointer;
+      &:active {
+        font-size: $size_h1/2;
+      }
+    }
+  .help_link{
+      color: black;
+      font-size: $size_h1/2.3;
+      position: relative;
+      bottom: 25px;
+      left: 160px;
+      cursor: help;
+    &:hover{
+      text-decoration:  none;
+      color: #3b88c3;
+    }
+  }
+}
+h4{
+  background-color: white;
+  font-family: $family;
+  color: #666666;
+  height: 60px;
+  width: 890px;
+  padding-top: 25px;
+  font-size: $size_h1/1.75;
+  //text-align: center;
+  margin: 0 auto;
+  a{
+    color: black;
+    font-weight: bold;
+    &:hover{
+      text-decoration: none;
+      &:active {
+        color: red;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px){
+  section {
+    div {
+      margin: 0;
+      .btn {
+        margin: 0 20px;
+        padding: 12px 40px 12px 60px;
+      }
+      ul{
+        transform: translateY(-130px);
+      }
+      .close {
+          bottom: 320px;
+          left: 570px;
+        }
+    }
+    h1 {
+      width: 650px;
+    }
+    form {
+      margin: 0 20px;
+      .account_info {
+        height: 20px;
+        width: 200px;
+      }
+      .login_btn {
+        height: 33px;
+        width: 80px;
+      }
+    }
+    .help_link {
+      position: relative;
+      bottom: 25px;
+      left: 110px;
+    }
+  }
+  h4 {
+    width: 650px;
+  }
+}
+
+@media only screen and (max-width: 650px){
+  body{
+    text-align: center;
+  }
+  section{
+    h1{
+      font-size: $size_h1/1.4;
+      padding-top: 15px;
+      height: 40px;
+      width: 100%;
+    }
+      div {
+      display: block;
+      ul{
+      transform: translateY(-40px);
+      }
+    }
+    .login_form{
+      margin: 0;
+    }
+    form {
+      margin-top: -60px;
+      text-align: center;
+      .account_info {
+        margin: 5px;
+        height: 30px;
+        width: 240px;
+      }
+      .login_btn {
+        margin: 10px auto;
+      }
+    }
+    .help_link {
+      bottom: 0;
+      left: 0;
+      margin-bottom: 20px;
+    }
+  }
+  h4 {
+    width: 100%;
+    font-size: $size_h1/2.3;
+    height: 40px;
+    padding-top: 15px;
+  }
+}
